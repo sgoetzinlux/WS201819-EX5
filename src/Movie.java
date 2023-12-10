@@ -20,10 +20,14 @@ public class Movie {
         this.rating = "PG";
     }
     // Loop through array movies and create new elements with Movies where rating equals "PG
-    public static Movie[] getPG(Movie[] movies){
+    // Solution ** Serge **
+    /* public static Movie[] getPG(Movie[] movies){
 
-      int arrlength = 0;
-      int i = 0;
+        // Length of PG movie array to return
+        int arrlength = 0;
+
+        // counter for array to return
+        int i = 0;
 
       for (Movie element: movies)
           if (element.rating == "PG") {
@@ -39,6 +43,30 @@ public class Movie {
 
 
       return moviePG;
+    } */
+
+    // Loop through array movies and create new elements with Movies where rating equals "PG
+    // Solution ** Gilles **
+    public static Movie[] getPG(Movie[] movies) {
+
+        int pgCount = 0;
+
+        for(Movie movie: movies) {
+            if ("PG".equals(movie.rating)) {
+                pgCount++;
+            }
+        }
+
+        Movie[] pgMovies = new Movie[pgCount];
+
+        int index = 0;
+        for (Movie movie: movies) {
+            if  ("PG".equals(movie.rating)) {
+                pgMovies[index] = movie;
+                index++;
+            }
+        }
+        return pgMovies;
     }
 
     public static void main(String[] args) {

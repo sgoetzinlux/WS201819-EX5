@@ -19,7 +19,7 @@ public class Movie {
         this.studio = studio;
         this.rating = "PG";
     }
-    // Loop through array movies and create new elements with Movies where rating equals "PG
+    // Loop through array movies and create new elements with Movies where rating equals "PG"
     // Solution ** Serge **
     /* public static Movie[] getPG(Movie[] movies){
 

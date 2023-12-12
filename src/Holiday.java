@@ -9,13 +9,13 @@ public class Holiday {
         this.day = day;
         this.month = month;
     }
+    // Getter for month
+    public String getMonth() {
+        return month;
+    }
+    boolean inSameMonth(Holiday holiday) {
 
-    boolean inSameMonth(Holiday compareHoliday) {
-
-        if (this.month == compareHoliday.month) {
-          return true;
-        }
-          else return false;
+        return (this.getMonth()  == holiday.month);
     }
 
 
@@ -33,9 +33,10 @@ public class Holiday {
         // Create 2 instances of Holiday
         Holiday holiday1 = new Holiday("New Year", 1, "January");
         Holiday holiday2 = new Holiday("Christmas", 25, "December");
+        Holiday holiday4 = new Holiday("Birthday Serge", 4, "January");
 
         // Check if month of holiday1 and holiday2 are identical
-        boolean sameMonth = holiday1.inSameMonth(holiday2);
+        boolean sameMonth = holiday4.inSameMonth(holiday1);
         System.out.println("Same month is :" + sameMonth);
 
         // Create array of holiday and call avgDate method
@@ -49,5 +50,8 @@ public class Holiday {
         Holiday holiday3 = new Holiday("Independence day", 4, "July");
 
     }
+
+
+
 
 }
